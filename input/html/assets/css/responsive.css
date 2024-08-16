@@ -1,0 +1,26 @@
+@media only screen and (max-width: 767px) {
+    .page-title h2 { 
+    font-size: 26px;
+}.main-slider-content h1 {
+    font-size: 33px; 
+}.main-slider-image {
+        height: 287px;
+    }
+    .main-slider-content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+        margin: auto;
+    }
+    .main-slider-content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .main-slider-image {
+      margin-top: 0;
+    }.navik-header { 
+    height: 91px;
+}section.sidebar-page-container { 
+    padding: 30px 0 30px;
+}
+}

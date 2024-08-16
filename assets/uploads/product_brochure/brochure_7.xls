@@ -1,0 +1,76 @@
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Country List</title>
+
+</head>
+
+
+
+<body>
+        <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
+        <thead>
+            
+            <tr>
+                <th style="background-color:#999" width="*">Sl. No.</th>
+                <th style="background-color:#999" width="*">Country Name</th>
+                <th style="background-color:#999" width="*">Country Short Name</th>
+                                <th style="background-color:#999" width="*">Country Code</th>
+                <th style="background-color:#999" width="*">Added On</th>
+                <th style="background-color:#999" width="*">Added By</th>
+                <th style="background-color:#999" width="*">Updated On</th>
+                <th style="background-color:#999" width="*">Updated By</th>
+                <th style="background-color:#999" width="*">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+                                    <tr>
+                            <td width="*">1</td>
+                            <td width="*">USAa</td>
+                            <td width="*">USA bnew</td>
+                                                        <td width="*">99</td>
+                            <td width="*"> 05-08-2024 06:07:07 PM &nbsp;</td>
+                            <td width="*">Krishna</td>
+                            <td width="*">
+                                05-08-2024 06:18:53 PM &nbsp;
+                            </td>
+                            <td width="*">Krishna</td>
+                            <td width="*">
+                                Block
+                                                            </td>
+
+                        </tr>
+                                            <tr>
+                            <td width="*">2</td>
+                            <td width="*">India</td>
+                            <td width="*">IN</td>
+                                                        <td width="*">91</td>
+                            <td width="*"> 21-11-2022 08:26:13 PM &nbsp;</td>
+                            <td width="*">Krishna</td>
+                            <td width="*">
+                                03-08-2024 03:40:24 PM &nbsp;
+                            </td>
+                            <td width="*">Krishna</td>
+                            <td width="*">
+                                 Active
+                                                            </td>
+
+                        </tr>
+                    
+
+                    </tbody>
+
+    </table>
+
+
+
+</body>
+
+</html>
