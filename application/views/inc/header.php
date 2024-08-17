@@ -108,7 +108,7 @@ if (empty($meta_others)) {
                         <?php foreach ($category_tree as $grand_parent_cat): ?>
 
                            <?php if (!empty($grand_parent_cat['subcategories'])): ?>
-                              <li><a href="<?= MAINSITE ?>products/category-list/<?= $grand_parent_cat['slug_url'] ?>"><?= $grand_parent_cat['name'] ?></a>
+                              <li><a href="<?= MAINSITE ?>products/category-list<?= $grand_parent_cat['slug_url'] ?>"><?= $grand_parent_cat['name'] ?></a>
                            <ul class="list-unstyled">
                            <?php foreach ($grand_parent_cat['subcategories'] as $parent_cat): ?>
                                    <li><a href="<?= MAINSITE ?>products/sub-category-list/<?= $parent_cat['slug_url'] ?>"><?= $parent_cat['name'] ?></a></li>
@@ -119,7 +119,7 @@ if (empty($meta_others)) {
                                 
                              
                            <?php else: ?>
-                              <li> <a href="<?= MAINSITE ?>products/list/<?= $grand_parent_cat['slug_url'] ?>"><?= $grand_parent_cat['name'] ?></a></li>
+                              <li> <a href="<?= MAINSITE ?>products/<?= $grand_parent_cat['slug_url'] ?>"><?= $grand_parent_cat['name'] ?></a></li>
                            <?php endif; ?>
 
                         <?php endforeach; ?>

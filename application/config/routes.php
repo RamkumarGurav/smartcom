@@ -56,8 +56,9 @@ $route['404_override'] = 'User/pageNotFound';
 $route['translate_uri_dashes'] = TRUE;
 
 
-$route['category-list/(:any)'] = 'user/category_list/$1';
+// $route['products/sub-category-list/(:any)'] = 'user/sub-category_list/$1';
 $route['products/category-list/(:any)'] = 'user/category_list/$1';
+$route['products/sub-category-list/(:any)'] = 'user/sub_category_list/$1';
 $route['products/(:any)'] = 'user/products/$1';
 $route['products-details/(:any)'] = 'user/products_details/$1';
 // $route['products/(:any)/(:any)'] = 'products/$1/$2';

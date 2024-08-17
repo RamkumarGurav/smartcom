@@ -74,12 +74,28 @@ class User extends Main
   function category_list($cat_slug = "")
   {
 
+
+    // $this->data['category_data'] = $this->User_model->get_category_data(
+    //   array(
+    //     "slug_url" => $cat_slug,
+    //     "record_status" => 1,
+    //     "is_display" => 1,
+    //     "details" => 1
+    //   )
+    // );
+
+    // if (!empty(count($this->data['category_data']))) {
+    //   $this->data['category_data'] = $this->data['category_data'][0];
+    // }
+
+
+
     $this->data['product_data'] = $this->User_model->get_product_data(
       array(
-        "category_slug" => $cat_slug,
+        "category_slug_url" => $cat_slug,
         "record_status" => 1,
         "is_display" => 1,
-        "details" => 1
+        // "details" => 1
       )
     );
 
@@ -89,63 +105,65 @@ class User extends Main
     exit;
 
 
-    $this->data['category_data'] = $this->User_model->get_category_data(
+
+
+    parent::get_header('header', $this->data);
+    $this->load->view('category_list', $this->data);
+    parent::get_footer('footer', $this->data);
+
+
+
+  }
+
+
+  function sub_category_list($cat_slug = "")
+  {
+
+
+    $this->data['category_data'] = $this->User_model->get_product_data(
       array(
-        "slug_url" => $cat_slug,
+        "category_slug_url" => $cat_slug,
         "record_status" => 1,
         "is_display" => 1,
         "details" => 1
       )
     );
 
-    if (!empty(count($this->data['category_data']))) {
-      $this->data['category_data'] = $this->data['category_data'][0];
-    }
-
-
-    if ($this->data['category_data']->super_category_name == "Parent") {
-      $this->data['product_data'] = $this->User_model->get_product_data(
-        array(
-          "category_id" => $this->data['category_data']->id,
-          "record_status" => 1,
-          "is_display" => 1,
-          "details" => 1
-        )
-      );
-
-      parent::get_header('header', $this->data);
-      $this->load->view('category_list', $this->data);
-      parent::get_footer('footer', $this->data);
-    } else {
-      $this->data['product_data'] = $this->User_model->get_product_data(
-        array(
-          "category_id" => $this->data['category_data']->id,
-          "record_status" => 1,
-          "is_display" => 1,
-          "details" => 1
-        )
-      );
-      parent::get_header('header', $this->data);
-      $this->load->view('parent_cats', $this->data);
-      parent::get_footer('footer', $this->data);
-    }
 
     echo "<pre> <br>";
     print_r($this->data['category_data']);
     exit;
-    $is_parent = "";
 
-    if ($is_parent) {
-      parent::get_header('header', $this->data);
-      $this->load->view('products', $this->data);
-      parent::get_footer('footer', $this->data);
-    } else {
+    // if (!empty(count($this->data['category_data']))) {
+    //   $this->data['category_data'] = $this->data['category_data'][0];
+    // }
 
-    }
+
+
+    $this->data['product_data'] = $this->User_model->get_product_data(
+      array(
+        "category_slug_url" => $cat_slug,
+        "record_status" => 1,
+        "is_display" => 1,
+        // "details" => 1
+      )
+    );
+
+
+    echo "<pre> <br>";
+    print_r($this->data['product_data']);
+    exit;
+
+
+
+
+    parent::get_header('header', $this->data);
+    $this->load->view('product_sub_category_list', $this->data);
+    parent::get_footer('footer', $this->data);
+
 
 
   }
-
 
 
   function products_details($product_slug = "")

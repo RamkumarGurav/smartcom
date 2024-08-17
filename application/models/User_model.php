@@ -173,9 +173,6 @@ class User_model extends CI_Model
       $this->db->where("category.slug_url", $params['category_slug_url']);
     }
 
-    if (!empty($params['category_id'])) {
-      $this->db->where("jpc.category_id", $params['category_id']);
-    }
 
 
 
